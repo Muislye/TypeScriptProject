@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { getUsers } from "../util/userUtils";
+import { getUsers } from "../util/userService";
 
 export const getUsersFromApi = async (req: Request, res: Response) => {
   try {
