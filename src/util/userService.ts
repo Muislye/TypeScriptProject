@@ -3,7 +3,7 @@ import asyncRetry from "async-retry";
 import { User } from '../types/User'
 import { transformUserData } from "../util/userUtils"
 
-export const getUsers = async () => {
+export const getUsers = async (): Promise<User[]> => {
     try {
       const userData = await asyncRetry(async () => {
         const response = await axios.get<User[]>(
